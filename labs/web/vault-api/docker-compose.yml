@@ -18,7 +18,7 @@ services:
       - /tmp:size=64m,mode=1777
       - /home/ctf/tmp:size=32m,mode=1700
 
-    user: "1000:1000"
+    user: 1000:1000
 
     mem_limit: 256m
     memswap_limit: 256m
@@ -30,7 +30,7 @@ services:
       - ctf_vault_internal
 
     ports:
-      - "0.0.0.0:8080:8000"
+      - "8080:8000"
 
     # FLAG is injected at runtime. Compose auto-loads the sibling .env file
     # so `cp .env.example .env` (then edit FLAG) is all local setup requires.
